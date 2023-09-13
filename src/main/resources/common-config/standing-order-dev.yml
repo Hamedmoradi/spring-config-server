@@ -76,8 +76,6 @@ secretKeyLocation: /opt/configs
 
 feign:
   client:
-    eb-url: https://eb.bmi.ir
-    baam-url: https://www.bmi.ir
     aggregation-url: 172.30.43.12:9095
     tan-url: 192.168.53.58:9080
     pooya-integration-url: 192.168.52.106:9383
@@ -94,20 +92,18 @@ sso:
   scopes: transaction
   authorization: Basic a2V5OnNlY3JldA==
 
-bmi:
-  oauth2:
-    excluded-urls: /api/agreements/audit,/v3/api-docs/**,/swagger-ui/**:*,/h2/**:*,/swagger-ui.html:*,/webjars/**:*,/v2/**:*,/swagger-resources/**:*,/actuator/**:*,/actuator/prometheus/**:*,/trace/**:*,/enterprisebaamapi/h2/**:*,/enterprisebaamapi/swagger-ui.html:*,/enterprisebaamapi/webjars/**:*,/enterprisebaamapi/v2/**:*,/enterprisebaamapi/swagger-resources/**:*,/enterprisebaamapi/actuator/**:*,/enterprisebaamapi/actuator/prometheus/**:*,/enterprisebaamapi/trace/**:*,/applications/**
-  audit:
-    advertised:
-      listeners: 192.168.53.58:9090
-      host:
-        name: 0.0.0.0
-    spring:
-      kafka:
-        key-serializer: org.apache.kafka.common.serialization.StringSerializer
-        value-serializer: org.apache.kafka.common.serialization.StringSerializer
-        bootstrap-servers: kafka:9092
-        consumer:
-          services: 192.168.53.58:8585/consumer
+
+audit:
+  advertised:
+    listeners: 192.168.53.58:9090
+    host:
+      name: 0.0.0.0
+  spring:
+    kafka:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      bootstrap-servers: kafka:9092
+      consumer:
+        services: 192.168.53.58:8585/consumer
 
 

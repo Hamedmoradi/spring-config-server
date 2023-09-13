@@ -8,11 +8,11 @@
         <version>2.7.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>ir.baam</groupId>
-    <artifactId>baam-config-server</artifactId>
+    <groupId>config.server</groupId>
+    <artifactId>config-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>baam-config-server</name>
-    <description>baam-config-server</description>
+    <name>config-server</name>
+    <description>config-server</description>
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
